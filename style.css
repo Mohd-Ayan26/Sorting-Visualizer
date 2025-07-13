@@ -1,0 +1,230 @@
+:root {
+  --primary-color: #d9fa00;
+  --secondary-color: #1a96bc;
+}
+* {
+  /* Below is the standard CSS code one should add to get rid of default margins and padding which most of tge HTML elements have */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  user-select: none;
+}
+body {
+  position: relative;
+  min-height: 100vh;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* Title CSS */
+.title {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: bold;
+  padding: 0.7em 1em;
+  color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.title:hover {
+  background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+  transform: translateY(-3px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.title:focus {
+  outline: 2px solid var(--highlight-color); /* Add a focus outline for accessibility */
+  outline-offset: 4px;
+}
+
+
+/* Navbar CSS */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1em;
+  font-size: 18px;
+  min-height: 80px;
+  padding: 1em 2em;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: var(--text-light-color); /* Assuming a variable for light text */
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+  transition: all 0.4s ease-in-out;
+}
+.navbar a {
+  all: unset;
+  cursor: pointer;
+  color: rgb(12, 12, 12);
+  font-weight: bold;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  background-color: #e1fd0d;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.navbar a:active {
+  transform: scale(0.95);
+}
+
+.navbar #menu {
+  width: fit-content;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  background-color: #e1fd0d;
+  color: rgb(12, 12, 12);
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.navbar #size {
+   
+  font-weight: bold;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  padding: 2px 2px;
+}
+.navbar #menu:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.navbar > .icon {
+  display: none; /* Ensure it's hidden for larger screens */
+}
+#menu,
+#random,
+#start {
+  cursor: pointer;
+}
+
+/* Center css */
+.center {
+  margin: 0 auto;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; /* Added shadow to make page border free */
+  height: 420px;
+  width: 1000px;
+  max-height: 731px;
+}
+.array {
+  display: flex;
+  align-items: flex-start;
+  min-height: 100%;
+  height: 100%;
+  padding: 1rem;
+  flex-direction: row;
+}
+.cell {
+  display: flex;
+  align-items: flex-start;
+  flex: 0.5;
+  width: 0.000001%;
+  margin: 1px;
+  background-color: #ebebeb;
+  resize: horizontal;
+  position: relative;
+  transition: all 0.4s ease-in;
+}
+.cell.done {
+  background-color: #f40039;
+  border-color: #f40039;
+  color: white;
+  transition: all 0.4s ease-out;
+}
+.cell.visited {
+  border-color: #61d88f;
+  background-color: #61d88f;
+  color: white;
+  transition: 0.5s;
+}
+.cell.current {
+  border-color: #4cc3f2;
+  background-color: #4cc3f2;
+  color: white;
+  transition: all 0.4s ease-out;
+}
+.cell.min {
+  background-color: #ff1493;
+  border-color: #ff1493;
+  color: white;
+  transition: all 0.4s ease-out;
+}
+
+/* Footer CSS */
+.fa.fa-heart {
+  color: #eb2c13;
+}
+footer {
+  text-align: center;
+  font-size: 18px;
+  color: #2c3e50;
+  padding: 1em;
+}
+.footer > p:nth-child(1) {
+  margin-bottom: 0.6em;
+}
+.footer2 {
+  text-align: center;
+  font-size: 10px;
+  color: #2c3e50;
+}
+.link {
+  text-decoration: none;
+  font-weight: bold;
+  color: #ff5252;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    gap: 0.4em;
+  }
+  .title {
+    font-size: 17px;
+  }
+  .navbar *,
+  .navbar a {
+    font-size: 14px;
+  }
+  .footer {
+    font-size: 18px;
+  }
+  a#random {
+    order: 4;
+  }
+  a.start {
+    order: 5;
+  }
+}
+@media screen and (max-width: 550px) {
+  .center {
+    width: 95%;
+  }
+}

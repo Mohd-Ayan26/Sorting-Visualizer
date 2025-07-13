@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet" />
+
+  <link rel="shortcut icon" type="image/x-icon" href="favicon1.png" />
+  <link rel="stylesheet" href="./style.css" />
+  <title>Sorting visualizer</title>
+</head>
+
+<body>
+  <div class="nav-container">
+    <h2 class="title" onclick="window.location.reload()">
+      SORTING VISUALIZER
+    </h2>
+    <div class="navbar" id="navbar">
+      <span class="options">
+        <select name="select sort algorithm" id="menu" class="algo-menu">
+          <option value="0">Choose algorithm</option>
+          <option value="1">Bubble Sort</option>
+          <option value="2">Selection Sort</option>
+          <option value="3">Insertion Sort</option>
+          <option value="4">Merge Sort</option>
+          <option value="5">Quick Sort</option>
+        </select>
+      </span>
+      <span class="options">
+        <select name="speed of visualization" id="menu" class="speed-menu">
+          <option value="0">Speed</option>
+          <option value="0.5">0.50x</option>
+          <option value="0.75">0.75x</option>
+          <option value="1">1.00x</option>
+          <option value="2">2.00x</option>
+          <option value="4">4.00x</option>
+        </select>
+      </span>
+      <span class="options">
+        <select name="array option" id="menu" class="array-option">
+          <option value="array">Array type</option>
+          <option value="random">Random Array</option>
+          <option value="input">Input Array</option>
+        </select>
+      </span>
+      <span class="options input-array-container" style="display: none;">
+        <a>
+          Input array
+          <input type="text" id="size" placeholder="       comma separated" class="input-array">
+        </a>
+      </span>
+      <span class="options size-menu-container" style="display: none;">
+        <a>
+          Array size
+          <input type="number" id="size" class="size-menu" min="5" max="200">
+        </a>
+      </span>
+      <a id="generate" onclick="RenderScreen()">Generate array</a>
+      <a class="start">Sort</a>
+      <a class="icon"><i class="fa fa-bars"></i></a>
+    </div>
+  </div>
+  <div class="center">
+    <div class="array"></div>
+  </div>
+  <footer class="footer">
+    <p>Created with <i class="fa fa-heart"></i> by Mohammad Ayan</p>
+    <p>
+      <a href="https://www.linkedin.com/in/mohd-ayan-siddiqui/" target="_blank" class="link">
+        <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+      </a>
+      <a href="https://github.com/Mohd-Ayan26" target="_blank" class="link">
+        <i class="fa fa-github" aria-hidden="true"></i>
+      </a>
+    </p>
+    </footer>
+    <footer class="footer2">
+    <p>&copy;Sorting Visualizer. All rights reserved.</p>
+  </footer>
+  <script src="./app.js"></script>
+  <script src="./helper.js"></script>
+  <script src="./sort-algorithms.js"></script>
+</body>
+
+</html>
