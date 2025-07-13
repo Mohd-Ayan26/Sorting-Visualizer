@@ -1,6 +1,5 @@
 # Sorting Algorithm Visualizer
 
-::: feature-section
 ## Overview
 
 This interactive Sorting Algorithm Visualizer provides a graphical
@@ -8,9 +7,8 @@ representation of popular sorting algorithms in action. The tool helps
 users understand how different sorting methods work by visualizing the
 sorting process step-by-step, with support for both custom user input
 and randomly generated arrays.
-:::
 
-::: feature-section
+
 ## Features
 
 ### Supported Algorithms
@@ -43,9 +41,7 @@ and randomly generated arrays.
 -   Visual highlighting of elements being compared/swapped
 -   Real-time updates showing the algorithm\'s progress
 -   Comparison counter and swap counter for performance insight
-:::
 
-::: feature-section
 ## How to Use
 
 1.  **Choose your input method**:
@@ -59,17 +55,13 @@ and randomly generated arrays.
     -   Click \"Sort\" to begin sorting
     -   \"Reset\" to start over with current array
     -   \"New Array\" to generate a new random set
-:::
 
-::: feature-section
 ## Technologies Used
 
 -   Frontend: HTML5, CSS3, JavaScript
-:::
 
-::: feature-section
 ## Contribution
 
 Contributions are welcome! Please fork the repository and submit a pull
 request with your improvements.
-:::
+
